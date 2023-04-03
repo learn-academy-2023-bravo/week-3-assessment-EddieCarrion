@@ -65,11 +65,17 @@
         // No need to change anything ABOVE this line ^
 
         return (
+
+        // The elements in this section were not wrapped properly, a Div container was missing
+        // The onCLick event had no function to call on (line 73)
+          <div>
           <h1>Draw a Card</h1>
-          <button onClick={}>
+          <button onClick={drawCard}>
+            
             Click to Draw a Card
           </button>
           <button onclick={shuffle}>
+    
             Return Cards and Shuffle Deck
           </button>
           <div style={handStyles}>
@@ -80,6 +86,7 @@
                 </div>
               )
             })}
+          </div>
           </div>
         )
       }
